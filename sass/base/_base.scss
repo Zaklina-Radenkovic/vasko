@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 112.5%; //18px /16px = 1.125 -> 1rem = 18px
+	scroll-behavior: smooth;
+}
+
+
+
+.body {
+	max-width: 80rem; //1440px
+	width: 100%;
+	//background-image: url("../images/background.png");
+	//background-color: $bg-color;
+	color: $color-light;
+	font-family: $font-primary;
+	font-weight: 400;
+	line-height: 1.5; //? 
+	letter-spacing: .05em;
+} 
+
+.image {
+	background-image: url("../images/background.png");
+	background-color: #0e0f10f5; //#0e0f10
+	background-repeat: no-repeat;
+	background-size: cover;
+}

@@ -1,0 +1,30 @@
+.about {
+	padding: 5.55rem 5.8rem 5rem;
+
+	&__content { 
+		display: flex; 
+		align-items: center;
+	}
+
+
+	&__text {
+		margin-right: 5rem;
+
+		& p {
+			@extend %paragraph;
+		}
+	}
+
+	&__collage {
+		
+		img {
+			opacity: 0.7;
+			transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+		}
+	}
+
+	&__collage img:hover {
+		opacity: 1;
+		transform: scale(1.05);
+	}
+}

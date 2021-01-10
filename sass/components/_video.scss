@@ -1,0 +1,39 @@
+.video {
+    padding: 5.5rem 5.8rem;
+	position:relative;
+	 
+
+    &__article {
+        width: 40%;
+        margin-left: 1.55rem;
+        background-color: $color-light;
+        opacity: .6;
+        color: $color-dark;    
+    }
+
+    &__text {
+        padding: 0 9% 1.11rem;
+
+        & p {
+            @extend %paragraph;
+            color: $color-dark;   
+        }
+    }
+}
+
+.bg-video {
+	position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .7;
+    overflow: hidden;
+
+    &__content {
+    	height: 100%;
+	    width: 100%;
+	    object-fit: cover;
+    }
+}

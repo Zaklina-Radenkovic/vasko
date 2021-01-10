@@ -1,0 +1,52 @@
+.features {
+	padding: 5.55rem 5.8rem 5rem;
+	
+	//height: 1050px;
+
+	h4 {
+		font-size: 18px;
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+
+	&__content { 
+		display: flex; 
+		justify-content: space-between;
+	}
+
+	&__text {
+		flex-basis: 43%;
+
+		& p {
+			@extend %paragraph;
+		}
+	}
+
+	&__feature {
+		flex-basis: 40%;
+
+		& > p {
+			@extend %paragraph;
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__box {
+		@include flex;
+		margin-bottom: 10px;
+
+		& p {
+			margin-left: 10px;
+		}
+	}
+
+}
+
+.feature-image {
+	background-image: url("../images/vasko_zuti.png");
+	background-color: $bg-color;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}

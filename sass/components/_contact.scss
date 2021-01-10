@@ -1,0 +1,78 @@
+.contact {
+	padding: 5.55rem 5.8rem 5rem;
+
+	&-title {
+		display: grid;
+		justify-content: center;
+		grid-row-gap: 2.77rem;
+    	grid-column-gap: 1.1rem;
+
+    	h2 {
+    		text-transform: uppercase;
+    		font-weight: 600;
+    	}
+	
+		img {
+			width: 32px;
+			grid-column: 2;
+		}
+
+		& p {
+			grid-column: span 2;
+			text-align: center;
+		}
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		justify-items: center;
+		align-items: center;
+	}
+
+	&__nav {
+		list-style-type: none;
+
+		 img {
+			margin-right: 15px;
+			width: 20px;
+			height: auto;
+		}
+	}
+
+	&__item--info {
+		display: flex;
+		align-items: flex-end;
+		margin-bottom: 20px;
+
+		& a:link,
+		& a:visited {
+			text-decoration: none;
+			color: $color-light;
+			font-size: .88rem;
+		}
+
+
+	}
+
+	& li:last-child {
+		display: flex;
+	}
+
+	& ul:last-child img {
+		width: auto;
+	}
+
+	
+}
+
+footer {
+	background-image: url("../images/background.png");
+	background-color: $bg-color;
+
+	padding: 17px 0;
+	p {
+		text-align: center;
+		font-size: .77rem;
+	}
+}
