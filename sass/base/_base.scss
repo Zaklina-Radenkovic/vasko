@@ -9,6 +9,17 @@ html {
 	box-sizing: border-box;
 	font-size: 112.5%; //18px /16px = 1.125 -> 1rem = 18px
 	scroll-behavior: smooth;
+
+	//Responsive
+
+	@include respond(tab-port) {
+		font-size: 106.25%;
+	}
+
+	@include respond(phone-big) {
+		font-size: 100%;
+	}
+
 }
 
 
@@ -27,7 +38,63 @@ html {
 
 .image {
 	background-image: url("../images/background.png");
-	background-color: #0e0f10f5; //#0e0f10
-	background-repeat: no-repeat;
+	background-color: #0e0f10;
+	background-position: right;
 	background-size: cover;
 }
+
+// .svg-loader {
+// 	display: flex;
+// 	position: relative;
+// 	align-content: space-around;
+// 	justify-content: center;
+// }
+
+// .loader-svg {
+// 	position: absolute;
+// 	left: 0;
+// 	right: 0;
+// 	top: 0;
+// 	bottom: 0;
+// 	fill: none;
+// 	stroke-width: 5px;
+// 	stroke-linecap: round;
+// 	stroke: rgb(64, 0, 148);
+// }
+
+// .loader-svg.bg {
+// 	stroke-width: 8px;
+// 	stroke: rgb(207, 205, 245);
+// }
+
+// .animate {
+// 	stroke-dasharray: 242.6;
+// 	animation: fill-animation 1s cubic-bezier(1,1,1,1) 0s infinite;
+// }
+
+// @keyframes fill-animation {
+// 	0%{
+// 		stroke-dasharray: 40 242.6;
+// 		stroke-dashoffset: 0;
+// 	}
+
+// 	50%{
+// 		stroke-dasharray: 141.3;
+// 		stroke-dashoffset: 141.3;
+// 	}
+
+// 	100%{
+// 		stroke-dasharray: 40 242.6;
+// 		stroke-dashoffset: 282.6;
+// 	}
+// }
+
+
+// .center { 
+//     position: absolute; 
+//     top: 0; 
+//     bottom: 0; 
+//     left: 0; 
+//     right: 0; 
+//     margin: auto; 
+// } 

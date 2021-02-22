@@ -1,3 +1,7 @@
 .mb {
 	margin-bottom: 4.16rem;
+
+	@include respond(tab-port) {
+		margin-bottom: 3.16rem;
+	}
 }

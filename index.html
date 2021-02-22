@@ -30,36 +30,58 @@
   />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <title>Vasko bas gitara | Nauči da sviraš bas gitaru</title>
+  
+  <title>Online časovi gitare | Vasko bas gitara</title>
 </head>
 
 <body class="body">
+  <!--div class="svg-loader center" id="loader">
+    <svg class="svg-container" height="100" width="100" viewBox="0 0 100 100">
+      <circle class="loader-svg bg" cx="50" cy="50" r="45"></circle>
+      <circle class="loader-svg animate" cx="50" cy="50" r="45"></circle>    
+  </div-->
+
+
+
   <div class="image">
-    
     <div class="hero">
       <header class="header">
-        <img src="images/logo-white.png" alt="vasko logo" class="logo">
+        <picture>
+            <source srcset="images/logo-white-sm-1x.png 1x, images/logo-white-sm-2x.png 2x" media="(max-width: 37.5em)" >
+            <img srcset="images/logo-white-1x.png 1x, images/logo-white-2x.png 2x" 
+            src="images/logo-white-2x.png" alt="vasko logo" class="logo">
+          </picture>
 
-        <ul class="header__nav">
+
+              
+        <button class="navigation__button">
+          <span class="navigation__button-line"></span>
+        </button>
+        
+        <ul class="header__nav js--header__nav">
           <li><a href="#career" class="header__link">Muzička karijera</a></li>
           <li><a href="#story" class="header__link">Učenici</a></li>
           <li><a href="#feature" class="header__link">Časovi</a></li>
           <li><a href="#kontakt" class="header__link">Kontakt</a></li>
         </ul>
+            
       </header>
 
       <section class="hero__sub"> 
         <div class="hero__mockup">
-          <img src="images/vasko.png" alt="Vasko svira gitaru" class="mockup">
+          <img srcset="images/vasko-1x.png 1x, images/vasko-2x.png 2x" 
+            src="images/vasko-2x.png" alt="Vasko svira gitaru" class="mockup">
+
+          
         </div>
         <div class="hero__box">
-          <h1 class="heading-primary"><span>Nauči da sviraš</span><br>
+          <h1 class="heading-primary anim1"><span>Nauči da sviraš</span><br>
             <span>gitaru i bas gitaru</span></h1>
-          <p class="hero__info">
-            Postani profi bas gitarista<br>
+          <p class="hero__info anim1">
+            Online časovi bas gitare<br>
             <span>Uči sa profesionalcem</span>
           </p>
-          <a href="#" class="btn hero__btn js--scroll-to-contact">Počni da učiš<span id="note">&#9835;</span></a>
+          <a href="#" class="btn hero__btn js--scroll-to-contact anim1">Počni da učiš<span id="note">&#9835;</span></a>
         </div>
       </section>
     </div><!--end of hero-->
@@ -68,13 +90,17 @@
       <h2 class="heading-secondary mb">Muzička karijera</h2>
       <div class="about__content">
         <div class="about__text">
-          <p >Saša Vasković je basista i predavač bas gitare sa stažom koji traje već 3 decenije.</p>
-          <p >Jedan je od osnivača bluz sastava City Blues Band, sa kojim je sarađivao sa mnogim poznatim muzičarima sa jugoslovenske i evropske scene, i učestvovao na brojinim bluz i džez festivalima u regionu. Sa srpskim bluz usnim harmonikašem Perom Džoom učestvovali su na bluz festivalu u Burgasu (Bugarska) gde su glavne zvezde bili The Blues Brothers.</p>
-          <p >Na niškom džez festivalu, “Nišville Jazz Festival”, pratili su poznata svetska bluz imena poput Hans Tesinka (Hans Theesink) i Ijan Sigala (Ian Siegal).</p>
+          <p>Saša Vasković je basista i predavač bas gitare sa stažom koji traje već 3 decenije.</p>
+          <p>Jedan je od osnivača bluz sastava City Blues Band. Sa njima je sarađivao sa mnogim poznatim muzičarima jugoslovenske i evropske scene, i učestvovao na brojnim bluz i džez festivalima u regionu. Sa srpskim bluz usnim harmonikašem Perom Džoom učestvovali su na bluz festivalu u Burgasu (Bugarska) gde su glavne zvezde bili <a href="https://en.wikipedia.org/wiki/The_Blues_Brothers" target="_blank" rel=”noopener”>The Blues Brothers</a>.</p>
+          <p>Na niškom džez festivalu, <a href="http://nisville.com/sr/home/" target="_blank" rel=”noopener”>Nišville Jazz Festival</a>, pratili su poznata svetska imena poput <a href="https://www.theessink.com/en/" target="_blank" rel=”noreferrer” rel=”noopener”>Hans Tesinka</a> i <a href="https://iansiegal.com/" target="_blank" rel=”noreferrer” rel=”noopener”>Ijan Sigala</a>.</p>
         </div>
 
         <div class="about__collage">
-            <img src="images/collage.png" alt="kolaž slika">
+          
+           <img srcset="images/collage.png 400w" 
+            sizes="(max-width: 43.75em) 70vw, (max-width: 56.25em) 40vw, 400px" 
+           alt="kolaž slika" src="images/collage.png">
+                       
         </div>
       </div>
     </section>
@@ -91,11 +117,10 @@
     <article class="video__article">
       <h3 class="heading-tertiary">U Kerberu</h3>
         <div class="video__text">
-          <p >Njegov najozbiljniji period sviranja obuhvata devedesete kada je svirao u čuvenom niškom sastavu "Kerberu".</p>
-          <p>Saša i Kerber su nastupali na hevi metal festivalu u Sofiji kao
-          predstavnici tadašnje Jugoslavije, na kojem je glavna zvezda
-          bio Ronnie James Dio, bivši pevač britanske grupe Rainbow.</p>
-          <p>Sa njima je radio na studijskom albumu “Zapis”, živom unplugged
+          <p>Najuspešniji period njegove karijere obuhvata devedesete kada je svirao u čuvenom niškom sastavu <a href="https://en.wikipedia.org/wiki/Kerber" target="_blank" rel=”noopener”>Kerberu</a>.</p>
+          <p>Saša i Kerber, kao predstavnici tadašnje Jugoslavije, nastupali su na hevi metal festivalu u Sofiji (Bugarska), na kojem je glavna zvezda
+          bio <a href="https://www.ronniejamesdio.com/" target="_blank" rel=”noreferrer” rel=”noopener”>Ronnie James Dio</a>, bivši pevač britanske grupe <a href="https://en.wikipedia.org/wiki/Rainbow_(rock_band)" target="_blank" rel=”noopener”>Rainbow</a>.</p>
+          <p>Sa njima je radio na studijskom albumu <a href="https://en.wikipedia.org/wiki/Zapis_(album)" target="_blank" rel=”noopener”>Zapis</a>, živom unplugged
           albumu snimljenom u novosadskom studiju M.</p>
         </div>
     </article>
@@ -107,12 +132,12 @@
       <h2 class="heading-secondary">Učenici</h2>
       <div class="story__text">
         <p>Saša svoju ljubav prema muzici i bas gitari uspešno prenosi i
-        na druge. Iz njegove škole su proizašli drugi muzičari poput
-        Sebe (Pentouseband), Labana Labo (Puls), Dejana Ilića i dr. </p>
-        <p>Jedan od njegovih učenika je i Milan Srdanović (Danilov
-        doživljaj Beča, So&So).</p>
-        <p>Srdanović je autor udžbenika za bas gitaru: Bass Bookvar,
-        Bas Vežbanka, gde je Saša bio jedan od recezenata. </p>
+        na druge. Iz njegove škole proizašli su muzičari poput
+        Sebe (&bdquo;Penthouseband&#8221;), Labana Labo (&bdquo;Puls&#8221;), Dejana Ilića... </p>
+        <p>Jedan od njegovih učenika je i <a href="https://www.facebook.com/milan.srdanovic.3" target="_blank" rel=”noopener”>Milan Srdanović</a>  (&bdquo;Danilov
+        doživljaj Beča&#8221;, &bdquo;So&So&#8221;).
+        Srdanović je autor udžbenika za bas gitaru: <span>Bass Bookvar</span>,
+        <span>Bas Vežbanka</span>, gde je Saša jedan od recenzenata. </p>
       </div>
     </div>
 
@@ -127,7 +152,7 @@
           izuzetnog basiste i veoma posvećenog
           pedagoga, koji svoje muzičko znanje i
           iskustvo svojim učenicima prenosi veoma
-          nesebično i s puno ljubavi i pažnje.
+          nesebično i s puno ljubavi i pažnje.</br>
           Najiskrenije preporuke!”</p>
         </blockquote>
         <div class="story-testimonial__user">
@@ -135,7 +160,12 @@
             <p>Milan Srdanović</p>
             <p>Basista</p>
           </div>
-          <img src="images/srdanovic-sm.png" class="story-img" width="130" height="85" alt="">
+          
+          <img srcset="images/srdanovic.jpg 300w, images/srdanovic-lg.jpg 1000w" 
+            sizes="(max-width: 56.25em) 15vw, (max-width: 37.5em) 25vw, 300px" 
+           class="story-img" alt="Milan Srdanović" src="images/srdanovic.jpg">
+
+          
         </div>
       </div>
     </div>
@@ -155,15 +185,15 @@
           <p>Pored muzičkih stilova kao što su rok, bluz, fank i pop, naučićeš i razne tehnike sviranja kao što su:</p>
           <div class="features__box">
             <img src="images/checkmark.svg">
+            <p>slep (slap)</p>
+          </div>
+          <div class="features__box">
+            <img src="images/checkmark.svg">
             <p>fingerstajl (fingerstyle)</p>
           </div>
           <div class="features__box">
             <img src="images/checkmark.svg">
             <p>tambpiking (thumbpicking)</p>
-          </div>
-          <div class="features__box">
-            <img src="images/checkmark.svg">
-            <p>slep (slap)</p>
           </div>
         </div>
       </div>
@@ -171,8 +201,8 @@
 
     <section class="contact js--contact" id="kontakt">
       <div class="contact-title mb">
-        <h2>Spreman za svoj prvi čas?</h2>
-        <img src="images/boy-broad-smile1.svg" alt="">
+        <h2>Spreman za svoj prvi online čas?</h2>
+        <img src="images/boy-broad-smile1.svg" class="boy" alt="">
         <p>Pošalji Saši poruku ili mu piši na email<br>
         i dobićeš svoj prvi online čas besplatno!</p>   
       </div> 
@@ -185,9 +215,9 @@
           </li>
           <li class="contact__item--info">
             <img src="images/phone.svg" alt="phone">
-            <a href="sms:+35677146953&body=Hi%2520there%252C%2520I%2527d%2520like%2520to%2520place%2520an%2520order%2520for...">Click here to text us!</a>
+            <a href="sms:+381692390496&body=Ćao Saša...">Pošalji SMS poruku</a>
 
-            <a href="tel:+1-543-123-4567" class="contact__link">+1-543-123-4567</a>
+            <!--a href="tel:+1-543-123-4567" class="contact__link">+1-543-123-4567</a-->
           </li>
           <li class="contact__item--info">
             <img src="images/placeholder.svg" alt="pin">
@@ -197,36 +227,45 @@
 
         <ul class="contact__nav">
           <li class="contact__item--info">
-            <img src="images/whatsapp.svg" alt="email">
-            <a href="whatsapp://send?phone=381603225433&text=">+381603225433</a></p>
+            <img src="images/whatsapp.svg" alt="whatsapp">
+            <a href="whatsapp://send?phone=381692390496&text=">+381692390496</a></p>
           </li>
           <li class="contact__item--info">
-            <img src="images/skype.svg" alt="phone">
-            <a href="skype:live:.cid.71bed320616d5258?chat">Start Chat</a>
+            <img src="images/skype.svg" alt="skype">
+            <a href="skype:live:.cid.71bed320616d5258?chat">Piši na skajp</a>
             
           </li>
           <li>
-            <a href="https://facebook.com/" target="_blank" class=""><img src="images/facebook.svg" alt=""></a>
-            <a href="https://instagram.com/" target="_blank" class=""><img src="images/instagram.svg" alt=""></a>
+            <a href="https://facebook.com/" target="_blank"><img src="images/facebook.svg" class="facebook" alt="facebook"></a>
+            <a href="https://instagram.com/" target="_blank" class=""><img src="images/instagram.svg" class="instagram" alt="instagram"></a>
           </li>
         </ul>
        
         <ul class="contact__nav">
-          <img src="images/Vasko-sm.png" alt="">
+          <picture>
+            <source srcset="images/vasko-sm-extra-1x.png 1x, images/vasko-sm-extra-2x.png 2x" media="(max-width: 37.5em)" >
+            <img srcset="images/vasko-sm-1x.png 1x, images/vasko-sm-2x.png 2x" 
+            src="images/vasko-sm-2x.png" alt="Vasko">
+          </picture> 
+          
         </ul>
       </div>
     </section>
   </div>
 
   <footer>
-    <p class="footer__text">&copy; Copyright vasko.gitara.com All rights reserved.</p>
+    <p class="footer__text">&copy; Copyright vaskobas.rs Sva prava zadržana.</p>
   </footer>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/jquery.waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 <script src="js/script.js"></script>
-
+<script>
+  gsap.from('.anim1', {opacity:0, duration: 1, y: -50, stagger: 0.6});
+  gsap.from('.mockup', {opacity:0, duration: 1.8, x:-90, delay: 0.5});
+</script>
 
 </body>
 </html>

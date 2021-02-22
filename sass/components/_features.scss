@@ -7,11 +7,19 @@
 		font-size: 18px;
 		text-transform: uppercase;
 		font-weight: 500;
+
+		@include respond(phone-sm) {
+			text-align: center;
+		}
 	}
 
 	&__content { 
 		display: flex; 
 		justify-content: space-between;
+
+		@include respond(phone-sm) {
+			flex-direction: column;
+		}
 	}
 
 	&__text {
@@ -39,14 +47,55 @@
 		& p {
 			margin-left: 10px;
 		}
+
+		@include respond(phone) {
+			justify-content: center;
+		}
+	}
+
+	//Responsive
+
+	@include respond(tab-land) {
+		padding: 5rem 3rem;
+	}
+
+	@include respond(tab-port) {
+		padding: 4rem 1rem;
+	}
+
+	@include respond(phone-big) {
+		padding: 3rem 1rem;
 	}
 
 }
 
 .feature-image {
 	background-image: url("../images/vasko_zuti.png");
-	background-color: $bg-color;
+	background-color: $color-darker;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
+
+	@media (min-resolution: 192dpi) and (min-width: 37.5em),
+		   (min-width: 125em) {
+		background-image: url("../images/vasko_zuti-lg.png");
+	}
+
+	@include respond(tab-port) {
+		background-image: url("../images/vasko-no-yellow.png");
+	background-color: $color-darker;
+	background-repeat: no-repeat;
+	background-size: cover;
+		background-attachment: fixed;
+	}
+
+	@include respond(phone-big) {
+		background-image: url("../images/vasko-no-yellow.png");
+	background-color: $color-darker;
+	background-repeat: no-repeat;
+	background-size: cover;
+		background-attachment: fixed;
+	}
+
+	
 }

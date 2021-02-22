@@ -1,20 +1,32 @@
 .story {
 	padding: 0 5.8rem;
-	background-image: url("../images/background_story.png");
+	background-image: url("../images/background.png");
+	background-position: right;
 	background-size: cover;
-	background-color: $bg-color;
+	background-color: $color-darker;
 
-	@include flex;
-	align-items: initial;
+	display: flex;
 
 	&__content {
-		flex-basis: 50%;
-		padding: 5.5rem 0 5rem;
-		margin-left: 50px;
-		margin-right: 70px;
+		flex: 0 1 50%;
+		padding: 5.5rem 5% 5rem;
+		// margin-left: 50px;
+		// margin-right: 70px;
 
 		@include flex;
 		flex-direction: column;
+
+		@include respond(tab-land) {
+			padding: 5rem 3% 5rem;
+		}
+
+		@include respond(phone-big) {
+			padding: 4rem 3% 5rem;
+		}
+
+		@include respond(phone-big) {
+			padding: 3rem 3% 4rem;
+		}
 	}
 
 	&__text p {
@@ -27,12 +39,39 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
+
+		& a:link,
+		  a:visited {
+		  	text-decoration: none;
+			color: $color-light;
+			font-style: italic; 
+		}
+
+		& span {
+			font-style: italic; 
+		}
+	}
+
+	//Responsive
+
+	@include respond(tab-land) {
+		padding: 0 3rem;
+	}
+
+	@include respond(tab-port) {
+		padding: 0;
+	}
+
+	@include respond(phone-big) {
+		background-position: center;
+		flex-direction: column;
+		padding: 0;
 	}
 }
 
 .story-testimonial {
-	flex-basis: 50%;
-	padding: 5.5rem 50px 0 100px;
+	flex: 0 1 44%;
+	padding: 10rem 5% 2% 8%;
 	background-color: $color-light;
 	
 
@@ -41,7 +80,7 @@
 	&__text {
 		color: $color-dark;
 		//@extend %paragraph;
-		width: 80%;
+		//width: 80%;
 	}
 
 	
@@ -65,16 +104,41 @@
 		margin-top: .77rem;
 	}
 
+	@include respond(tab-land) {
+		padding: 9.5rem 3% 2% 8%;
+	}
+
+	@include respond(phone-big) {
+		clip-path: polygon(70% 10%, 70% 0, 100% 0, 100% 100%, 0 100%, 0 0, 60% 0);
+		padding: 5.5rem 8% 2rem;
+
+	}
 	
 }
 
 blockquote {
-	margin-bottom: 35px;
+	margin-bottom: 2.22rem;
+	position: relative;
+
 	& img {
-		width: 80px;
+		position: absolute;
+		top: -4.4rem;
+		left: -2.5rem;
+		width: 4.44rem;
 		display: block;
-		margin-left: -2.22rem;
+		
 		//filter: invert(84%) sepia(22%) saturate(5633%) hue-rotate(1deg) brightness(106%) contrast(89%);
+	
+	@include respond(tab-land1) {
+		font-size: 4rem;
+	}
+
+	@include respond(phone-big) {
+		left: -1.5rem;
+	}
+
+
+
 	}
 
 	& p::first-letter {
@@ -84,8 +148,13 @@ blockquote {
 }
 
 .story-img {
-	    border: 1px solid $color-primary;
+	   box-shadow: 0 0 0 1px $color-primary;
+	   width: 15vw;
+
+	   @include respond(phone-big) {
+		width: 30vw;
 	}
+}
 
 
 

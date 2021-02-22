@@ -1,5 +1,5 @@
 .contact {
-	padding: 5.55rem 5.8rem 5rem;
+	padding: 0 5.8rem 5rem;
 
 	&-title {
 		display: grid;
@@ -10,16 +10,27 @@
     	h2 {
     		text-transform: uppercase;
     		font-weight: 600;
+
+    		@include respond(phone-big) {
+				font-size: 1.5rem;
+				text-align: center;
+			}
     	}
 	
 		img {
 			width: 32px;
 			grid-column: 2;
+			transition: all .2s;
 		}
 
 		& p {
 			grid-column: span 2;
 			text-align: center;
+		}
+
+		@include respond(phone-big) {
+			grid-row-gap: 0;
+    	grid-column-gap: 0;
 		}
 	}
 
@@ -28,6 +39,10 @@
 		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 		justify-items: center;
 		align-items: center;
+
+		@include respond(phone-big) {
+			grid-row-gap: 2rem;
+		}
 	}
 
 	&__nav {
@@ -50,17 +65,63 @@
 			text-decoration: none;
 			color: $color-light;
 			font-size: .88rem;
+
+			&::after {
+			content: "";
+			display: block;
+			width: 0;
+			height: 1px;
+			background-color:$color-primary;
+			transition: width .3s; 
+			}
+
+			&:hover::after {
+				width: 100%;
+			}
 		}
-
-
 	}
 
 	& li:last-child {
 		display: flex;
 	}
 
+	& ul:last-child {
+		@include respond(phone-big) {
+			grid-column: 1 / -1;
+		}
+	}
+
 	& ul:last-child img {
-		width: auto;
+		width: 100%;
+		height: auto;
+		margin-right: 0;
+
+		@include respond(tab-port) {
+	        width: 80%;
+	    }
+	}
+
+	.facebook:hover {
+		filter: invert(12%) sepia(73%) saturate(642%) hue-rotate(351deg) brightness(97%) contrast(95%);
+	}
+
+	.instagram:hover {
+		filter: invert(12%) sepia(73%) saturate(642%) hue-rotate(351deg) brightness(97%) contrast(95%);
+	}
+
+	.boy:hover {
+		filter: invert(12%) sepia(73%) saturate(642%) hue-rotate(351deg) brightness(97%) contrast(95%);
+		transform: scale(1.2);
+	}
+
+	//Responsive
+
+	@include respond(tab-land) {
+		padding: 0 3rem 5rem;
+	}
+
+	@include respond(tab-port) {
+		padding: 0 1rem 3rem;
 	}
 
 	
@@ -68,11 +129,15 @@
 
 footer {
 	background-image: url("../images/background.png");
-	background-color: $bg-color;
+	background-color: $color-darker;
 
 	padding: 17px 0;
 	p {
 		text-align: center;
 		font-size: .77rem;
 	}
+}
+
+.yellow {
+	background-color: red;
 }

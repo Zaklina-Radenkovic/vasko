@@ -1,0 +1,128 @@
+.header {
+	
+	@include flex { 
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.logo {
+	 	width: 110px;
+	}
+	
+	&__nav {
+		list-style-type: none; 
+		@include flex;
+		transition: all .2s;
+
+		& li {
+			margin-right: 2.77rem;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		@include respond(phone) {
+
+			display: none;
+			flex-direction: column;
+			width: 100%;
+			
+
+			&.show {  //this cause me a lot of trouble; way of writing class inside media queries (how to add class)
+				display: flex;
+				transform: translateX(40%);
+			}
+
+			& li {
+				margin-right: 0;
+				margin-bottom: .5rem;
+				}
+		}
+	}
+
+
+
+	
+	&__link,
+	&__visited  {
+		display: inline-block; //otherwise, the line will be the length of the <li>
+		text-decoration: none;
+		color: $color-light;
+		text-transform: uppercase;
+		font-style: normal;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 0;
+			height: 1px;
+			background-color:$color-primary;
+			transition: width .3s; 
+		}
+
+		&:hover::after {
+			width: 100%;
+		}
+	}	
+
+	
+} 
+
+.navigation__button {
+ display:none;
+	width: 40px;
+	height: 40px;
+	border: none;
+	background-color: transparent;
+			z-index: 1100;
+
+		cursor: pointer;
+
+	&-line {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 2px;
+		background-color: $color-light;
+		// margin: 10px 0;
+
+		&::before {
+		content: "";
+			display: block;
+			position:absolute;
+			width: 100%;
+		height: 2px;
+		background-color: $color-light;
+			margin-top: -8px;
+		}
+
+		&::after {
+		content: "";
+			display: block;
+			position: absolute;
+			width: 100%;
+		height: 2px;
+		background-color: $color-light;
+			margin-top: 8px;
+		}
+	}
+
+	&:focus {
+		outline: none;
+	} 
+
+	@include respond(phone) {
+		display: block;
+	}
+		
+}
+
+// .header__nav {
+//  	@include respond(phone) {
+//  		.show {
+// 				display: flex;
+// 			}
+// 		}
+//  }

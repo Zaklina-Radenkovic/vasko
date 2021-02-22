@@ -1,0 +1,120 @@
+// // .mobile-navigation{
+// // 	display: none;
+// // 	background: rgba(0,0,0,0.9);
+// // 	position: fixed;
+// // 	z-index: 10;
+// // 	right: 0;
+// // 	top: 70px;
+
+// // 	width: 100vw;
+// // 		height: 44vh;
+
+	
+
+	
+// .mobile-navigation__nav {
+// 		display: flex;
+// 	justify-content: center;
+// 	margin-top: 50px;
+
+	
+		
+// 	}
+
+// 	.mobile-navigation__list {
+// 		list-style-type: none;
+// 		display: flex;
+// 		flex-direction: column;
+// 		// justify-content: space-between;
+
+// 		& li {
+// 			margin-bottom: 20px;
+// 		}
+
+// 		@include respond(phone) {
+// 		display: none;
+// 	}
+// 	}
+
+// 	.mobile-navigation__link,
+// 	.mobile-navigation__visited {
+// 		display: inline-block; //otherwise, the line will be the length of the <li>
+// 		text-decoration: none;
+// 		color: $color-light;
+// 		text-transform: uppercase;
+// 		font-style: normal;
+
+// 		&::after {
+// 			content: "";
+// 			display: block;
+// 			width: 0;
+// 			height: 1px;
+// 			background-color:$color-primary;
+// 			transition: width .3s; 
+// 		}
+
+// 		&:hover::after {
+// 			width: 100%;
+// 		}
+// 	}
+
+	
+
+
+// .navigation__button {
+//  display:none;
+// 	width: 50px;
+// 	height: 50px;
+// 	border: none;
+// 	background-color: transparent;
+// 	padding: 10px;
+// 		z-index: 1100;
+// outline: none;
+// 		cursor: pointer;
+
+// 	&-line {
+// 		display: block;
+// 		position: relative;
+// 		width: 46px;
+// 		height: 2px;
+// 		background-color: $color-light;
+// 		// margin: 10px 0;
+
+// 		&::before {
+// 		content: "";
+// 			display: block;
+// 			position:absolute;
+// 			width: 46px;
+// 		height: 2px;
+// 		background-color: yellow;
+// 			margin-top: -8px;
+// 		}
+
+// 		&::after {
+// 		content: "";
+// 			display: block;
+// 			position: absolute;
+// 			width: 46px;
+// 		height: 2px;
+// 		background-color: red;
+// 			margin-top: 8px;
+// 		}
+// 	}
+
+// 	@include respond(phone) {
+// 		display: block;
+// 	}
+		
+// }
+
+// // .open {
+// // 	display: block;
+// // }
+
+
+// .showNav{
+//         display:block;
+//     }
+//     .hideNav{
+//         display:none;
+//     }
